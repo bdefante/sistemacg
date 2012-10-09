@@ -1,0 +1,23 @@
+<h1>Listing tiporubricas</h1>
+
+<table>
+  <tr>
+    <th>Definicao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tiporubricas.each do |tiporubrica| %>
+  <tr>
+    <td><%= tiporubrica.definicao %></td>
+    <td><%= link_to 'Show', tiporubrica %></td>
+    <td><%= link_to 'Edit', edit_tiporubrica_path(tiporubrica) %></td>
+    <td><%= link_to 'Excluir', tiporubrica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tiporubrica', new_tiporubrica_path %>

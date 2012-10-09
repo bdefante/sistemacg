@@ -1,4 +1,6 @@
 Sistemacg::Application.routes.draw do
+  resources :tiporubricas
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

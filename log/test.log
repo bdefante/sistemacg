@@ -1,0 +1,279 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (122.2ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (0.4ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+
+
+Started GET "/tiporubricas/new" for 127.0.0.1 at 2012-10-09 14:17:24 -0300
+Processing by TiporubricasController#new as HTML
+  Rendered tiporubricas/_form.html.erb (1.0ms)
+  Rendered tiporubricas/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 481ms (Views: 420.9ms | ActiveRecord: 1.2ms)
+  [1m[36m (80.6ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (11.9ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (216.8ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:17:26 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:17:26 UTC +00:00]]
+  [1m[36m (18.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/tiporubricas/1/edit" for 127.0.0.1 at 2012-10-09 14:17:26 -0300
+Processing by TiporubricasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTiporubrica Load (0.8ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tiporubricas/_form.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 28.6ms | ActiveRecord: 0.8ms)
+  [1m[36m (39.8ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (59.5ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (6.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:17:26 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:17:26 UTC +00:00]]
+  [1m[36m (46.9ms)[0m  [1mcommit transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (80.3ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (28.5ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (266.3ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:20:44 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:20:44 UTC +00:00]]
+  [1m[36m (38.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (99.8ms)[0m  DELETE FROM "tiporubricas";
+  [1m[36m (22.1ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'tiporubricas';[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 09 Oct 2012 17:20:45 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:20:45 UTC +00:00]]
+  [1m[35m (21.8ms)[0m  commit transaction
+
+
+Started GET "/tiporubricas/1/edit" for 127.0.0.1 at 2012-10-09 14:20:46 -0300
+Processing by TiporubricasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTiporubrica Load (0.6ms)[0m  [1mSELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered tiporubricas/_form.html.erb (6.1ms)
+Completed 200 OK in 391ms (Views: 370.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (58.4ms)[0m  DELETE FROM "tiporubricas";
+  [1m[36m (26.4ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'tiporubricas';[0m
+
+
+Started GET "/tiporubricas/new" for 127.0.0.1 at 2012-10-09 14:20:47 -0300
+Processing by TiporubricasController#new as HTML
+  Rendered tiporubricas/_form.html.erb (0.5ms)
+Completed 200 OK in 21ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (89.9ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (0.4ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (306.1ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:24:10 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:24:10 UTC +00:00]]
+  [1m[36m (37.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/tiporubricas" for 127.0.0.1 at 2012-10-09 14:24:11 -0300
+Processing by TiporubricasController#index as HTML
+  [1m[35mTiporubrica Load (0.3ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" 
+  Rendered tiporubricas/index.html.erb within layouts/application (38.9ms)
+Completed 200 OK in 414ms (Views: 411.6ms | ActiveRecord: 0.3ms)
+  [1m[36m (50.2ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (67.9ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+
+
+Started GET "/tiporubricas/new" for 127.0.0.1 at 2012-10-09 14:24:13 -0300
+Processing by TiporubricasController#new as HTML
+  Rendered tiporubricas/_form.html.erb (1.3ms)
+Completed 200 OK in 77ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (60.4ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (0.5ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (54.7ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:24:13 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:24:13 UTC +00:00]]
+  [1m[36m (98.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/tiporubricas/1/edit" for 127.0.0.1 at 2012-10-09 14:24:13 -0300
+Processing by TiporubricasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTiporubrica Load (11.0ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tiporubricas/_form.html.erb (0.4ms)
+Completed 200 OK in 43ms (Views: 22.4ms | ActiveRecord: 11.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (41.9ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (120.7ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (542.8ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:28:26 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:28:26 UTC +00:00]]
+  [1m[36m (50.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/tiporubricas/1/edit" for 127.0.0.1 at 2012-10-09 14:28:28 -0300
+Processing by TiporubricasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTiporubrica Load (0.5ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tiporubricas/_form.html.erb (1.1ms)
+  Rendered tiporubricas/edit.html.erb within layouts/application (179.5ms)
+Completed 200 OK in 418ms (Views: 388.8ms | ActiveRecord: 0.5ms)
+  [1m[36m (32.0ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (98.6ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+
+
+Started GET "/tiporubricas/new" for 127.0.0.1 at 2012-10-09 14:28:29 -0300
+Processing by TiporubricasController#new as HTML
+  Rendered tiporubricas/_form.html.erb (0.4ms)
+Completed 200 OK in 21ms (Views: 18.2ms | ActiveRecord: 0.0ms)
+  [1m[36m (40.8ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (0.3ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (10.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:28:29 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:28:29 UTC +00:00]]
+  [1m[36m (49.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/tiporubricas" for 127.0.0.1 at 2012-10-09 14:28:29 -0300
+Processing by TiporubricasController#index as HTML
+  [1m[35mTiporubrica Load (0.3ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" 
+Completed 200 OK in 28ms (Views: 25.8ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/tiporubricas/1" for 127.0.0.1 at 2012-10-09 14:28:29 -0300
+Processing by TiporubricasController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTiporubrica Load (0.4ms)[0m  [1mSELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "tiporubricas" WHERE "tiporubricas"."id" = ?[0m  [["id", 1]]
+  [1m[35m (24.7ms)[0m  commit transaction
+Redirected to http://www.example.com/tiporubricas
+Completed 302 Found in 219ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tiporubricas" for 127.0.0.1 at 2012-10-09 14:28:30 -0300
+Processing by TiporubricasController#index as HTML
+  [1m[36mTiporubrica Load (0.4ms)[0m  [1mSELECT "tiporubricas".* FROM "tiporubricas" [0m
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 0.4ms)
+Connecting to database specified by database.yml
+  [1m[36m (79.8ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (20.1ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+
+
+Started GET "/tiporubricas/new" for 127.0.0.1 at 2012-10-09 14:30:30 -0300
+Processing by TiporubricasController#new as HTML
+  Rendered tiporubricas/_form.html.erb (1.4ms)
+  Rendered tiporubricas/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 262ms (Views: 229.5ms | ActiveRecord: 0.6ms)
+  [1m[36m (50.8ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (21.3ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (141.9ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:30:31 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:30:31 UTC +00:00]]
+  [1m[36m (48.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/tiporubricas/1/edit" for 127.0.0.1 at 2012-10-09 14:30:32 -0300
+Processing by TiporubricasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTiporubrica Load (0.4ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tiporubricas/_form.html.erb (0.4ms)
+Completed 200 OK in 44ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+  [1m[36m (52.5ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (50.8ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:30:32 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:30:32 UTC +00:00]]
+  [1m[36m (24.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/tiporubricas" for 127.0.0.1 at 2012-10-09 14:30:32 -0300
+Processing by TiporubricasController#index as HTML
+  [1m[35mTiporubrica Load (2.1ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" 
+Completed 200 OK in 41ms (Views: 37.2ms | ActiveRecord: 2.1ms)
+
+
+Started DELETE "/tiporubricas/1" for 127.0.0.1 at 2012-10-09 14:30:32 -0300
+Processing by TiporubricasController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTiporubrica Load (0.5ms)[0m  [1mSELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (5.1ms)[0m  [1mDELETE FROM "tiporubricas" WHERE "tiporubricas"."id" = ?[0m  [["id", 1]]
+  [1m[35m (28.4ms)[0m  commit transaction
+Redirected to http://www.example.com/tiporubricas
+Completed 302 Found in 87ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tiporubricas" for 127.0.0.1 at 2012-10-09 14:30:32 -0300
+Processing by TiporubricasController#index as HTML
+  [1m[36mTiporubrica Load (9.6ms)[0m  [1mSELECT "tiporubricas".* FROM "tiporubricas" [0m
+Completed 200 OK in 28ms (Views: 17.8ms | ActiveRecord: 9.6ms)
+Connecting to database specified by database.yml
+  [1m[36m (87.0ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (23.1ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+
+
+Started GET "/tiporubricas/new" for 127.0.0.1 at 2012-10-09 14:34:29 -0300
+Processing by TiporubricasController#new as HTML
+  Rendered tiporubricas/_form.html.haml (823.1ms)
+  Rendered tiporubricas/new.html.erb within layouts/application (869.9ms)
+Completed 200 OK in 1140ms (Views: 1096.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/tiporubricas" for 127.0.0.1 at 2012-10-09 14:34:31 -0300
+Processing by TiporubricasController#create as HTML
+  Parameters: {"utf8"=>"✓", "tiporubrica"=>{"definicao"=>"passagem"}, "commit"=>"Salvar"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (26.8ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:34:31 UTC +00:00], ["definicao", "passagem"], ["updated_at", Tue, 09 Oct 2012 17:34:31 UTC +00:00]]
+  [1m[36m (28.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://www.example.com/tiporubricas/1
+Completed 302 Found in 80ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tiporubricas/1" for 127.0.0.1 at 2012-10-09 14:34:31 -0300
+Processing by TiporubricasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTiporubrica Load (0.9ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tiporubricas/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 30ms (Views: 17.7ms | ActiveRecord: 0.9ms)
+  [1m[36m (38.2ms)[0m  [1mDELETE FROM "tiporubricas";[0m
+  [1m[35m (21.7ms)[0m  DELETE FROM sqlite_sequence where name = 'tiporubricas';
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)  [["created_at", Tue, 09 Oct 2012 17:34:31 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:34:31 UTC +00:00]]
+  [1m[36m (16.9ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/tiporubricas/1/edit" for 127.0.0.1 at 2012-10-09 14:34:31 -0300
+Processing by TiporubricasController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTiporubrica Load (2.0ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered tiporubricas/_form.html.haml (46.2ms)
+Completed 200 OK in 68ms (Views: 57.7ms | ActiveRecord: 2.0ms)
+
+
+Started PUT "/tiporubricas/1" for 127.0.0.1 at 2012-10-09 14:34:31 -0300
+Processing by TiporubricasController#update as HTML
+  Parameters: {"utf8"=>"✓", "tiporubrica"=>{"definicao"=>"passagem"}, "commit"=>"Salvar", "id"=>"1"}
+  [1m[36mTiporubrica Load (0.3ms)[0m  [1mSELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (19.0ms)[0m  [1mUPDATE "tiporubricas" SET "definicao" = 'passagem', "updated_at" = '2012-10-09 17:34:31.605346' WHERE "tiporubricas"."id" = 1[0m
+  [1m[35m (41.3ms)[0m  commit transaction
+Redirected to http://www.example.com/tiporubricas/1
+Completed 302 Found in 91ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tiporubricas/1" for 127.0.0.1 at 2012-10-09 14:34:31 -0300
+Processing by TiporubricasController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTiporubrica Load (0.2ms)[0m  [1mSELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 200 OK in 140ms (Views: 133.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (100.6ms)[0m  DELETE FROM "tiporubricas";
+  [1m[36m (6.5ms)[0m  [1mDELETE FROM sqlite_sequence where name = 'tiporubricas';[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "tiporubricas" ("created_at", "definicao", "updated_at") VALUES (?, ?, ?)[0m  [["created_at", Tue, 09 Oct 2012 17:34:31 UTC +00:00], ["definicao", "MyString"], ["updated_at", Tue, 09 Oct 2012 17:34:31 UTC +00:00]]
+  [1m[35m (26.2ms)[0m  commit transaction
+
+
+Started GET "/tiporubricas" for 127.0.0.1 at 2012-10-09 14:34:32 -0300
+Processing by TiporubricasController#index as HTML
+  [1m[36mTiporubrica Load (0.4ms)[0m  [1mSELECT "tiporubricas".* FROM "tiporubricas" [0m
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/tiporubricas/1" for 127.0.0.1 at 2012-10-09 14:34:32 -0300
+Processing by TiporubricasController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTiporubrica Load (0.2ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" WHERE "tiporubricas"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (12.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "tiporubricas" WHERE "tiporubricas"."id" = ?  [["id", 1]]
+  [1m[36m (25.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://www.example.com/tiporubricas
+Completed 302 Found in 91ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/tiporubricas" for 127.0.0.1 at 2012-10-09 14:34:32 -0300
+Processing by TiporubricasController#index as HTML
+  [1m[35mTiporubrica Load (0.4ms)[0m  SELECT "tiporubricas".* FROM "tiporubricas" 
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.4ms)
