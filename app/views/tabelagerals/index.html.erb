@@ -1,0 +1,27 @@
+<h1>Listing tabelagerals</h1>
+
+<table>
+  <tr>
+    <th>Valor entrada</th>
+    <th>Valor saida</th>
+    <th>Ano</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tabelagerals.each do |tabelageral| %>
+  <tr>
+    <td><%= tabelageral.valor_entrada %></td>
+    <td><%= tabelageral.valor_saida %></td>
+    <td><%= tabelageral.ano %></td>
+    <td><%= link_to 'Show', tabelageral %></td>
+    <td><%= link_to 'Edit', edit_tabelageral_path(tabelageral) %></td>
+    <td><%= link_to 'Excluir', tabelageral, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tabelageral', new_tabelageral_path %>

@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121009171328) do
+ActiveRecord::Schema.define(:version => 20121009175246) do
+
+  create_table "tabelagerals", :force => true do |t|
+    t.float    "valor_entrada"
+    t.float    "valor_saida"
+    t.integer  "ano"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "tiporubricas", :force => true do |t|
     t.string   "definicao"
