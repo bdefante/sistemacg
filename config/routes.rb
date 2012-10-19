@@ -1,4 +1,8 @@
 Sistemacg::Application.routes.draw do
+  resources :pais
+
+  resources :bancos
+
   resources :tabelagerals
 
   resources :tiporubricas

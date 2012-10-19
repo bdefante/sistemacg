@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @pai.nome %>
+</p>
+
+<p>
+  <b>Nacionalidade:</b>
+  <%= @pai.nacionalidade %>
+</p>
+
+
+<%= link_to 'Edit', edit_pai_path(@pai) %> |
+<%= link_to 'Back', pais_path %>

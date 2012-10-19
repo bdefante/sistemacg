@@ -11,7 +11,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121009175246) do
+ActiveRecord::Schema.define(:version => 20121011232753) do
+
+  create_table "bancos", :force => true do |t|
+    t.string   "nome"
+    t.string   "observacoes"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "pais", :force => true do |t|
+    t.string   "nome"
+    t.string   "nacionalidade"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
 
   create_table "tabelagerals", :force => true do |t|
     t.float    "valor_entrada"
