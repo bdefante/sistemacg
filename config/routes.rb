@@ -1,6 +1,8 @@
 Sistemacg::Application.routes.draw do
   resources :pais
 
+  resources :rubricas
+
   resources :bancos
 
   resources :tabelagerals

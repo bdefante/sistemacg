@@ -1,0 +1,27 @@
+<h1>Listing rubricas</h1>
+
+<table>
+  <tr>
+    <th>Valor entrada</th>
+    <th>Valor saida</th>
+    <th>Tabela geral</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rubricas.each do |rubrica| %>
+  <tr>
+    <td><%= rubrica.valor_entrada %></td>
+    <td><%= rubrica.valor_saida %></td>
+    <td><%= rubrica.tabelageral %></td>
+    <td><%= link_to 'Show', rubrica %></td>
+    <td><%= link_to 'Edit', edit_rubrica_path(rubrica) %></td>
+    <td><%= link_to 'Excluir', rubrica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rubrica', new_rubrica_path %>

@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Valor entrada:</b>
+  <%= @rubrica.valor_entrada %>
+</p>
+
+<p>
+  <b>Valor saida:</b>
+  <%= @rubrica.valor_saida %>
+</p>
+
+<p>
+  <b>Tabela geral:</b>
+  <%= @rubrica.tabelageral.ano %>
+</p>
+
+
+<%= link_to 'Edit', edit_rubrica_path(@rubrica) %> |
+<%= link_to 'Back', rubricas_path %>

@@ -2,7 +2,7 @@
 
 require 'spec_helper'
 
-feature 'gerenciar pai' do
+feature 'gerenciar Pai' do
 
   scenario 'incluir Pai' do # , :javascript => true do
 

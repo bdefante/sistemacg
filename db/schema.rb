@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121011232753) do
+ActiveRecord::Schema.define(:version => 20121022162044) do
 
   create_table "bancos", :force => true do |t|
     t.string   "nome"
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(:version => 20121011232753) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  create_table "rubricas", :force => true do |t|
+    t.float    "valor_entrada"
+    t.float    "valor_saida"
+    t.integer  "tabelageral_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "rubricas", ["tabelageral_id"], :name => "index_rubricas_on_tabelageral_id"
 
   create_table "tabelagerals", :force => true do |t|
     t.float    "valor_entrada"

@@ -2,21 +2,21 @@
 
 require 'spec_helper'
 
-feature 'gerenciar rubrica' do
+feature 'gerenciar Agencia' do
 
-  scenario 'incluir Rubrica' do #, :javascript => true do
+  scenario 'incluir Agencia' do #, :javascript => true do
 
-    tabelageral = FactoryGirl.create(:tabelageral, :valor_entrada => 1500.0, :valor_saida => 1450.0, :ano => 2011)
+    banco = FactoryGirl.create(:banco, :nome => 'Itau Unibanco', :observacoes => 'S.A.')
 
-    visit new_rubrica_path
+    visit new_agencia_path
 
-    preencher_e_verificar_rubrica
+    preencher_e_verificar_agencia
 
     
 
   end
 
-  scenario 'alterar Rubrica' do #, :javascript => true do
+  scenario 'alterar Agencia' do #, :javascript => true do
 
     tabelageral = FactoryGirl.create(:tabelageral, :valor_entrada => 1500.0, :valor_saida => 1450.0, :ano => 2011)
 

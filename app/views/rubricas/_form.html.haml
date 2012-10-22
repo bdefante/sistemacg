@@ -1,0 +1,6 @@
+= semantic_form_for [@rubrica] do |form|
+ 
+  = form.input :valor_entrada, :label => 'Valor_entrada'
+  = form.input :valor_saida, :label => 'Valor_saida'
+  = form.input :tabelageral, :member_label => :ano, :label => 'Tabelageral'
+  = form.submit 'Salvar' 
