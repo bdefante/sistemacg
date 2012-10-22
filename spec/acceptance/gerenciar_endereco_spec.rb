@@ -39,13 +39,11 @@ feature 'gerenciar Endereco' do
   end
 
    def preencher_e_verificar_endereco
-
-      	fill_in 'Estrangeiro', :with => false
-        
+      fill_in 'Estrangeiro', :with => 'false'
  
       click_button 'Salvar'
 
-      	page.should have_content 'Estrangeiro: false"
+      	page.should have_content 'Estrangeiro: false'
 
       
 

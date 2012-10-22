@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "enderecos/new" do
   before(:each) do
     assign(:endereco, stub_model(Endereco,
-      :estrangeiro => false
+      :estrangeiro => "MyString"
     ).as_new_record)
   end
 

@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :endereco do
-    estrangeiro false
+    estrangeiro "MyString"
   end
 end

@@ -728,3 +728,250 @@ Migrating to CreateEnderecos (20121022190307)
   [1m[35m (6.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022184642')
   [1m[36m (8.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121011230342')[0m
   [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022162044')
+Connecting to database specified by database.yml
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-22 18:02:27 -0200
+Served asset /rails.png - 200 OK (39ms)
+
+
+Started GET "/sisteacg" for 127.0.0.1 at 2012-10-22 18:02:37 -0200
+
+ActionController::RoutingError (No route matches [GET] "/sisteacg"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/blenda/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/sistemacg" for 127.0.0.1 at 2012-10-22 18:02:40 -0200
+
+ActionController::RoutingError (No route matches [GET] "/sistemacg"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/blenda/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (13.8ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2012-10-22 18:04:13 -0200
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Processing by Rails::InfoController#properties as HTML
+  Rendered inline template (0.4ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sistemacg" for 127.0.0.1 at 2012-10-22 18:05:02 -0200
+
+ActionController::RoutingError (No route matches [GET] "/sistemacg"):
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/blenda/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/blenda/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (42.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (19.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTiporubricas (20121009171328)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "tiporubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "definicao" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121009171328')
+  [1m[36m (29.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTabelagerals (20121009175246)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "tabelagerals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "ano" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121009175246')
+  [1m[36m (61.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBancos (20121011230342)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "bancos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "observacoes" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121011230342')
+  [1m[36m (32.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateRubricas (20121019052252)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (15.5ms)[0m  [1mCREATE TABLE "rubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "tabelageral_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_rubricas_on_tabelageral_id" ON "rubricas" ("tabelageral_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121019052252')
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePais (20121022162044)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "pais" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "nacionalidade" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022162044')
+  [1m[36m (27.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAgencia (20121022165543)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "agencia" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_agencia" varchar(255), "endereco" varchar(255), "banco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("agencia")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_agencia_on_banco_id" ON "agencia" ("banco_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022165543')
+  [1m[36m (27.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUfs (20121022182854)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "ufs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sigla" varchar(255), "nome" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022182854')
+  [1m[36m (13.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMunicipios (20121022184642)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "municipios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "uf_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("municipios")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_municipios_on_uf_id" ON "municipios" ("uf_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022184642')
+  [1m[36m (65.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (3.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("agencia")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_agencia_on_banco_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bancos")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("municipios")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_municipios_on_uf_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("pais")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_rubricas_on_tabelageral_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tabelagerals")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("tiporubricas")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("ufs")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (13.1ms)[0m  [1mCREATE TABLE "agencia" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_agencia" varchar(255), "endereco" varchar(255), "banco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("agencia")
+  [1m[36m (8.0ms)[0m  [1mCREATE INDEX "index_agencia_on_banco_id" ON "agencia" ("banco_id")[0m
+  [1m[35m (8.3ms)[0m  CREATE TABLE "bancos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "observacoes" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.7ms)[0m  [1mCREATE TABLE "municipios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "uf_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("municipios")
+  [1m[36m (7.0ms)[0m  [1mCREATE INDEX "index_municipios_on_uf_id" ON "municipios" ("uf_id")[0m
+  [1m[35m (5.2ms)[0m  CREATE TABLE "pais" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "nacionalidade" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (4.7ms)[0m  [1mCREATE TABLE "rubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "tabelageral_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (7.4ms)[0m  [1mCREATE INDEX "index_rubricas_on_tabelageral_id" ON "rubricas" ("tabelageral_id")[0m
+  [1m[35m (10.7ms)[0m  CREATE TABLE "tabelagerals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "ano" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (8.2ms)[0m  [1mCREATE TABLE "tiporubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "definicao" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "ufs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sigla" varchar(255), "nome" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (8.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (7.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022184642')[0m
+  [1m[35m (4.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022182854')
+  [1m[36m (11.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019052252')[0m
+  [1m[35m (8.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121009175246')
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022165543')[0m
+  [1m[35m (7.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121009171328')
+  [1m[36m (4.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121011230342')[0m
+  [1m[35m (7.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022162044')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTiporubricas (20121009171328)
+Migrating to CreateTabelagerals (20121009175246)
+Migrating to CreateBancos (20121011230342)
+Migrating to CreateRubricas (20121019052252)
+Migrating to CreatePais (20121022162044)
+Migrating to CreateAgencia (20121022165543)
+Migrating to CreateUfs (20121022182854)
+Migrating to CreateMunicipios (20121022184642)
+Migrating to CreateEnderecos (20121022202448)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "enderecos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "estrangeiro" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121022202448')[0m
+  [1m[35m (28.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("agencia")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_agencia_on_banco_id')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("bancos")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("enderecos")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("municipios")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_municipios_on_uf_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("pais")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_rubricas_on_tabelageral_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tabelagerals")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("tiporubricas")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("ufs")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (8.9ms)[0m  [1mCREATE TABLE "agencia" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_agencia" varchar(255), "endereco" varchar(255), "banco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("agencia")
+  [1m[36m (7.4ms)[0m  [1mCREATE INDEX "index_agencia_on_banco_id" ON "agencia" ("banco_id")[0m
+  [1m[35m (8.4ms)[0m  CREATE TABLE "bancos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "observacoes" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.8ms)[0m  [1mCREATE TABLE "enderecos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "estrangeiro" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.6ms)[0m  CREATE TABLE "municipios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "uf_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("municipios")[0m
+  [1m[35m (7.1ms)[0m  CREATE INDEX "index_municipios_on_uf_id" ON "municipios" ("uf_id")
+  [1m[36m (4.2ms)[0m  [1mCREATE TABLE "pais" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "nacionalidade" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.0ms)[0m  CREATE TABLE "rubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "tabelageral_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("rubricas")[0m
+  [1m[35m (8.1ms)[0m  CREATE INDEX "index_rubricas_on_tabelageral_id" ON "rubricas" ("tabelageral_id")
+  [1m[36m (7.2ms)[0m  [1mCREATE TABLE "tabelagerals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "ano" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.7ms)[0m  CREATE TABLE "tiporubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "definicao" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (5.8ms)[0m  [1mCREATE TABLE "ufs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sigla" varchar(255), "nome" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.7ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (7.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (7.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022202448')
+  [1m[36m (3.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022182854')[0m
+  [1m[35m (6.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121019052252')
+  [1m[36m (3.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121009175246')[0m
+  [1m[35m (7.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022165543')
+  [1m[36m (7.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121009171328')[0m
+  [1m[35m (3.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022184642')
+  [1m[36m (7.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121011230342')[0m
+  [1m[35m (4.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022162044')
