@@ -1,0 +1,6 @@
+= semantic_form_for [@agencium] do |form|
+ 
+  = form.input :numero_agencia, :label => 'Numero_agencia'
+  = form.input :endereco, :label => 'Endereco'
+  = form.input :banco, :member_label => :nome, :label => 'Banco'
+  = form.submit 'Salvar' 

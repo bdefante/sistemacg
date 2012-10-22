@@ -8,34 +8,31 @@ feature 'gerenciar Agencia' do
 
     banco = FactoryGirl.create(:banco, :nome => 'Itau Unibanco', :observacoes => 'S.A.')
 
-    visit new_agencia_path
+    visit new_agencium_path
 
     preencher_e_verificar_agencia
-
-    
-
   end
 
   scenario 'alterar Agencia' do #, :javascript => true do
 
-    tabelageral = FactoryGirl.create(:tabelageral, :valor_entrada => 1500.0, :valor_saida => 1450.0, :ano => 2011)
+    banco = FactoryGirl.create(:banco, :nome => 'Itau Unibanco', :observacoes => 'S.A.')
 
-    rubrica = FactoryGirl.create(:rubrica, :tabelageral => tabelageral)
+    agencia = FactoryGirl.create(:agencium, :banco => banco)
 
-    visit edit_rubrica_path(rubrica)
+    visit edit_agencium_path(agencia)
 
-    preencher_e_verificar_rubrica
+    preencher_e_verificar_agencia
 
 
   end
 
-  scenario 'excluir Rubrica' do #, :javascript => true do
+  scenario 'excluir Agencia' do #, :javascript => true do
 
-    tabelageral = FactoryGirl.create(:tabelageral, :valor_entrada => 1500.0, :valor_saida => 1450.0, :ano => 2011)
+    banco = FactoryGirl.create(:banco, :nome => 'Itau Unibanco', :observacoes => 'S.A.')
 
-    rubrica = FactoryGirl.create(:rubrica, :tabelageral => tabelageral)
+    agencia = FactoryGirl.create(:agencium, :banco => banco)
 
-    visit rubricas_path
+    visit agencia_path
 
     click_link 'Excluir'
     
@@ -44,17 +41,17 @@ feature 'gerenciar Agencia' do
 
 
 
-  def preencher_e_verificar_rubrica
+  def preencher_e_verificar_agencia
 
-    fill_in 'Valor_entrada', :with => 150.0
-    fill_in 'Valor_saida', :with => 145.0
+    fill_in 'Numero_agencia', :with => '123456'
+    fill_in 'Endereco', :with => 'Avenida Sete de Setembro, 130'
     
-    select '2011', :on => 'Tabelageral'
+    select 'Itau Unibanco', :on => 'Banco'
     
     click_button 'Salvar'
-    page.should have_content 'Valor entrada: 150.0'
-    page.should have_content 'Valor saida: 145.0'
-    page.should have_content 'Tabela geral: 2011'
+    page.should have_content 'Numero agencia: 123456'
+    page.should have_content 'Endereco: Avenida Sete de Setembro, 130'
+    page.should have_content 'Banco: Itau Unibanco'
     
   end
 

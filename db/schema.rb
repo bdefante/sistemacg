@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022162044) do
+ActiveRecord::Schema.define(:version => 20121022165543) do
+
+  create_table "agencia", :force => true do |t|
+    t.string   "numero_agencia"
+    t.string   "endereco"
+    t.integer  "banco_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
+
+  add_index "agencia", ["banco_id"], :name => "index_agencia_on_banco_id"
 
   create_table "bancos", :force => true do |t|
     t.string   "nome"

@@ -1,4 +1,6 @@
 Sistemacg::Application.routes.draw do
+  resources :agencia
+
   resources :pais
 
   resources :rubricas
