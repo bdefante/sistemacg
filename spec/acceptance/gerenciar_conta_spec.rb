@@ -2,37 +2,40 @@
 
 require 'spec_helper'
 
-feature 'gerenciar Municipio' do
+feature 'gerenciar Conta' do
 
-  scenario 'incluir Municipio' do #, :javascript => true do
+  scenario 'incluir Conta' do #, :javascript => true do
 
-    uf = FactoryGirl.create(:uf, :sigla => 'RJ', :nome => 'Rio de Janeiro')
+    banco = FactoryGirl.create(:banco, :nome => 'Itau Unibanco', :observacoes => 'S.A.')
+    agencia = FactoryGirl.create(:agencium, :numero_agencia => '123456', :endereco => 'Avenida Sete de Setembro, 130', :banco => banco)
 
-    visit new_municipio_path
+    visit new_contum_path
 
-    preencher_e_verificar_municipio
+    preencher_e_verificar_conta
   end
 
-  scenario 'alterar Municipio' do #, :javascript => true do
+  scenario 'alterar Conta' do #, :javascript => true do
 
-    uf = FactoryGirl.create(:uf, :sigla => 'RJ', :nome => 'Rio de Janeiro')
+    banco = FactoryGirl.create(:banco, :nome => 'Itau Unibanco', :observacoes => 'S.A.')
+    agencia = FactoryGirl.create(:agencium, :numero_agencia => '123456', :endereco => 'Avenida Sete de Setembro, 130', :banco => banco)
 
-    municipio = FactoryGirl.create(:municipio, :uf => uf)
+    conta = FactoryGirl.create(:contum, :agencium => agencia)
 
-    visit edit_municipio_path(municipio)
+    visit edit_contum_path(conta)
 
-    preencher_e_verificar_municipio
+    preencher_e_verificar_conta
 
 
   end
 
-  scenario 'excluir Municipio' do #, :javascript => true do
+  scenario 'excluir Conta' do #, :javascript => true do
 
-    uf = FactoryGirl.create(:uf, :sigla => 'RJ', :nome => 'Rio de Janeiro')
+    banco = FactoryGirl.create(:banco, :nome => 'Itau Unibanco', :observacoes => 'S.A.')
+    agencia = FactoryGirl.create(:agencium, :numero_agencia => '123456', :endereco => 'Avenida Sete de Setembro, 130', :banco => banco)
 
-    municipio = FactoryGirl.create(:municipio, :uf => uf)
+    conta = FactoryGirl.create(:contum, :agencium => agencia)
 
-    visit municipios_path
+    visit conta_path
 
     click_link 'Excluir'
     
@@ -41,15 +44,15 @@ feature 'gerenciar Municipio' do
 
 
 
-  def preencher_e_verificar_municipio
+  def preencher_e_verificar_conta
 
-    fill_in 'Nome', :with => 'Campos dos Goytacazes'
+    fill_in 'Numero_conta', :with => '54321'
     
-    select 'RJ', :on => 'Uf'
+    select '123456', :on => 'Agencia'
     
     click_button 'Salvar'
-    page.should have_content 'Nome: Campos dos Goytacazes'
-    page.should have_content 'UF: RJ'
+    page.should have_content 'Numero conta: 54321'
+    page.should have_content 'Agencia: 123456'
     
   end
 

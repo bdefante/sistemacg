@@ -1,0 +1,5 @@
+= semantic_form_for [@contum] do |form|
+ 
+  = form.input :numero_conta, :label => 'Numero_conta'
+  = form.input :agencium, :member_label => :numero_agencia, :label => 'Agencia'
+  = form.submit 'Salvar' 

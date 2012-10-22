@@ -1,4 +1,6 @@
 Sistemacg::Application.routes.draw do
+  resources :conta
+
   resources :enderecobrasileiros
 
   resources :enderecoestrangeiros

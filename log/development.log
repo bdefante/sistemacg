@@ -1319,3 +1319,330 @@ Migrating to CreateEnderecobrasileiros (20121022213744)
   [1m[36m (7.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121011230342')[0m
   [1m[35m (4.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022202448')
   [1m[36m (7.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022162044')[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTiporubricas (20121009171328)
+Migrating to CreateTabelagerals (20121009175246)
+Migrating to CreateBancos (20121011230342)
+Migrating to CreateRubricas (20121019052252)
+Migrating to CreatePais (20121022162044)
+Migrating to CreateAgencia (20121022165543)
+Migrating to CreateUfs (20121022182854)
+Migrating to CreateMunicipios (20121022184642)
+Migrating to CreateEnderecos (20121022202448)
+Migrating to CreateEnderecoestrangeiros (20121022211201)
+Migrating to CreateEnderecobrasileiros (20121022213744)
+Migrating to CreateConta (20121022221425)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "conta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_conta" varchar(255), "agencia_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("conta")[0m
+  [1m[35m (0.2ms)[0m  CREATE INDEX "index_conta_on_agencia_id" ON "conta" ("agencia_id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121022221425')[0m
+  [1m[35m (24.4ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("agencia")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_agencia_on_banco_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bancos")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("conta")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_info('index_conta_on_agencia_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("enderecobrasileiros")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_enderecobrasileiros_on_endereco_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecobrasileiros_on_municipio_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecoestrangeiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecoestrangeiros_on_endereco_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_enderecoestrangeiros_on_pai_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("enderecos")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("municipios")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_municipios_on_uf_id')
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("pais")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_rubricas_on_tabelageral_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tabelagerals")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("tiporubricas")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("ufs")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (13.7ms)[0m  [1mCREATE TABLE "agencia" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_agencia" varchar(255), "endereco" varchar(255), "banco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("agencia")
+  [1m[36m (8.5ms)[0m  [1mCREATE INDEX "index_agencia_on_banco_id" ON "agencia" ("banco_id")[0m
+  [1m[35m (8.7ms)[0m  CREATE TABLE "bancos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "observacoes" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (10.6ms)[0m  [1mCREATE TABLE "conta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_conta" varchar(255), "agencia_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("conta")
+  [1m[36m (8.2ms)[0m  [1mCREATE INDEX "index_conta_on_agencia_id" ON "conta" ("agencia_id")[0m
+  [1m[35m (8.4ms)[0m  CREATE TABLE "enderecobrasileiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome_logradouro" varchar(255), "numero" varchar(255), "complemento" varchar(255), "caixa_postal" varchar(255), "bairro" varchar(255), "cep" varchar(255), "municipio_id" integer, "endereco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (6.9ms)[0m  CREATE INDEX "index_enderecobrasileiros_on_endereco_id" ON "enderecobrasileiros" ("endereco_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecobrasileiros_on_endereco_id')
+  [1m[36m (3.9ms)[0m  [1mCREATE INDEX "index_enderecobrasileiros_on_municipio_id" ON "enderecobrasileiros" ("municipio_id")[0m
+  [1m[35m (12.3ms)[0m  CREATE TABLE "enderecoestrangeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "identificacao_residencial" varchar(255), "identificacao_local" varchar(255), "identificacao_regional" varchar(255), "pai_id" integer, "endereco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecoestrangeiros")[0m
+  [1m[35m (8.0ms)[0m  CREATE INDEX "index_enderecoestrangeiros_on_endereco_id" ON "enderecoestrangeiros" ("endereco_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecoestrangeiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecoestrangeiros_on_endereco_id')
+  [1m[36m (8.3ms)[0m  [1mCREATE INDEX "index_enderecoestrangeiros_on_pai_id" ON "enderecoestrangeiros" ("pai_id")[0m
+  [1m[35m (9.5ms)[0m  CREATE TABLE "enderecos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "estrangeiro" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (8.7ms)[0m  [1mCREATE TABLE "municipios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "uf_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("municipios")
+  [1m[36m (6.9ms)[0m  [1mCREATE INDEX "index_municipios_on_uf_id" ON "municipios" ("uf_id")[0m
+  [1m[35m (9.2ms)[0m  CREATE TABLE "pais" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "nacionalidade" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "rubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "tabelageral_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.0ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (5.2ms)[0m  [1mCREATE INDEX "index_rubricas_on_tabelageral_id" ON "rubricas" ("tabelageral_id")[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE "tabelagerals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "ano" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.8ms)[0m  [1mCREATE TABLE "tiporubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "definicao" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "ufs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sigla" varchar(255), "nome" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (11.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (11.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022221425')[0m
+  [1m[35m (14.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022182854')
+  [1m[36m (11.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019052252')[0m
+  [1m[35m (8.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121009175246')
+  [1m[36m (5.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022211201')[0m
+  [1m[35m (7.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022165543')
+  [1m[36m (7.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121009171328')[0m
+  [1m[35m (11.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022184642')
+  [1m[36m (11.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121011230342')[0m
+  [1m[35m (7.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022202448')
+  [1m[36m (4.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022213744')[0m
+  [1m[35m (7.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022162044')
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (37.5ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (3.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTiporubricas (20121009171328)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tiporubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "definicao" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121009171328')
+  [1m[36m (28.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateTabelagerals (20121009175246)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "tabelagerals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "ano" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121009175246')
+  [1m[36m (6.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateBancos (20121011230342)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "bancos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "observacoes" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121011230342')
+  [1m[36m (4.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateRubricas (20121019052252)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "rubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "tabelageral_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_rubricas_on_tabelageral_id" ON "rubricas" ("tabelageral_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121019052252')
+  [1m[36m (7.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePais (20121022162044)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "pais" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "nacionalidade" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022162044')
+  [1m[36m (9.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateAgencia (20121022165543)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "agencia" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_agencia" varchar(255), "endereco" varchar(255), "banco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.2ms)[0m  PRAGMA index_list("agencia")
+  [1m[36m (0.2ms)[0m  [1mCREATE INDEX "index_agencia_on_banco_id" ON "agencia" ("banco_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022165543')
+  [1m[36m (23.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateUfs (20121022182854)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "ufs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sigla" varchar(255), "nome" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022182854')
+  [1m[36m (3.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateMunicipios (20121022184642)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "municipios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "uf_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("municipios")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_municipios_on_uf_id" ON "municipios" ("uf_id")[0m
+  [1m[35m (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022184642')
+  [1m[36m (18.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEnderecos (20121022202448)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "enderecos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "estrangeiro" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022202448')
+  [1m[36m (8.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateEnderecoestrangeiros (20121022211201)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "enderecoestrangeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "identificacao_residencial" varchar(255), "identificacao_local" varchar(255), "identificacao_regional" varchar(255), "pai_id" integer, "endereco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("enderecoestrangeiros")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_enderecoestrangeiros_on_pai_id" ON "enderecoestrangeiros" ("pai_id")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("enderecoestrangeiros")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_enderecoestrangeiros_on_pai_id')[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_enderecoestrangeiros_on_endereco_id" ON "enderecoestrangeiros" ("endereco_id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121022211201')[0m
+  [1m[35m (35.2ms)[0m  commit transaction
+Migrating to CreateEnderecobrasileiros (20121022213744)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "enderecobrasileiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome_logradouro" varchar(255), "numero" varchar(255), "complemento" varchar(255), "caixa_postal" varchar(255), "bairro" varchar(255), "cep" varchar(255), "municipio_id" integer, "endereco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_enderecobrasileiros_on_municipio_id" ON "enderecobrasileiros" ("municipio_id")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecobrasileiros_on_municipio_id')
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_enderecobrasileiros_on_endereco_id" ON "enderecobrasileiros" ("endereco_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121022213744')
+  [1m[36m (7.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (3.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("agencia")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_agencia_on_banco_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("bancos")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecobrasileiros_on_endereco_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_enderecobrasileiros_on_municipio_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("enderecoestrangeiros")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_enderecoestrangeiros_on_endereco_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecoestrangeiros_on_pai_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecos")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("municipios")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_municipios_on_uf_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("pais")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("rubricas")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_rubricas_on_tabelageral_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("tabelagerals")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tiporubricas")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("ufs")[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (5.2ms)[0m  CREATE TABLE "agencia" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_agencia" varchar(255), "endereco" varchar(255), "banco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("agencia")[0m
+  [1m[35m (5.8ms)[0m  CREATE INDEX "index_agencia_on_banco_id" ON "agencia" ("banco_id")
+  [1m[36m (7.9ms)[0m  [1mCREATE TABLE "bancos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "observacoes" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "enderecobrasileiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome_logradouro" varchar(255), "numero" varchar(255), "complemento" varchar(255), "caixa_postal" varchar(255), "bairro" varchar(255), "cep" varchar(255), "municipio_id" integer, "endereco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (8.4ms)[0m  CREATE INDEX "index_enderecobrasileiros_on_endereco_id" ON "enderecobrasileiros" ("endereco_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecobrasileiros_on_endereco_id')
+  [1m[36m (3.9ms)[0m  [1mCREATE INDEX "index_enderecobrasileiros_on_municipio_id" ON "enderecobrasileiros" ("municipio_id")[0m
+  [1m[35m (10.3ms)[0m  CREATE TABLE "enderecoestrangeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "identificacao_residencial" varchar(255), "identificacao_local" varchar(255), "identificacao_regional" varchar(255), "pai_id" integer, "endereco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecoestrangeiros")[0m
+  [1m[35m (14.2ms)[0m  CREATE INDEX "index_enderecoestrangeiros_on_endereco_id" ON "enderecoestrangeiros" ("endereco_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecoestrangeiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecoestrangeiros_on_endereco_id')
+  [1m[36m (6.8ms)[0m  [1mCREATE INDEX "index_enderecoestrangeiros_on_pai_id" ON "enderecoestrangeiros" ("pai_id")[0m
+  [1m[35m (3.4ms)[0m  CREATE TABLE "enderecos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "estrangeiro" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (32.0ms)[0m  [1mCREATE TABLE "municipios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "uf_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("municipios")
+  [1m[36m (3.7ms)[0m  [1mCREATE INDEX "index_municipios_on_uf_id" ON "municipios" ("uf_id")[0m
+  [1m[35m (4.8ms)[0m  CREATE TABLE "pais" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "nacionalidade" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "rubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "tabelageral_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (9.2ms)[0m  [1mCREATE INDEX "index_rubricas_on_tabelageral_id" ON "rubricas" ("tabelageral_id")[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE "tabelagerals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "ano" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.2ms)[0m  [1mCREATE TABLE "tiporubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "definicao" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (8.7ms)[0m  CREATE TABLE "ufs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sigla" varchar(255), "nome" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (6.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (4.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.0ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (6.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022213744')[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022182854')
+  [1m[36m (6.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019052252')[0m
+  [1m[35m (2.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121009175246')
+  [1m[36m (6.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022211201')[0m
+  [1m[35m (3.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022165543')
+  [1m[36m (5.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121009171328')[0m
+  [1m[35m (3.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022184642')
+  [1m[36m (8.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121011230342')[0m
+  [1m[35m (9.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022202448')
+  [1m[36m (3.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022162044')[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateTiporubricas (20121009171328)
+Migrating to CreateTabelagerals (20121009175246)
+Migrating to CreateBancos (20121011230342)
+Migrating to CreateRubricas (20121019052252)
+Migrating to CreatePais (20121022162044)
+Migrating to CreateAgencia (20121022165543)
+Migrating to CreateUfs (20121022182854)
+Migrating to CreateMunicipios (20121022184642)
+Migrating to CreateEnderecos (20121022202448)
+Migrating to CreateEnderecoestrangeiros (20121022211201)
+Migrating to CreateEnderecobrasileiros (20121022213744)
+Migrating to CreateConta (20121022224025)
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  CREATE TABLE "conta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_conta" varchar(255), "agencium_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("conta")[0m
+  [1m[35m (0.1ms)[0m  CREATE INDEX "index_conta_on_agencium_id" ON "conta" ("agencium_id")
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121022224025')[0m
+  [1m[35m (49.5ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("agencia")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_agencia_on_banco_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("bancos")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("conta")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_conta_on_agencium_id')[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("enderecobrasileiros")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_enderecobrasileiros_on_endereco_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecobrasileiros_on_municipio_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("enderecoestrangeiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecoestrangeiros_on_endereco_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_enderecoestrangeiros_on_pai_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("enderecos")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("municipios")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_municipios_on_uf_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("pais")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_rubricas_on_tabelageral_id')[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("tabelagerals")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("tiporubricas")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("ufs")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (12.4ms)[0m  [1mCREATE TABLE "agencia" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_agencia" varchar(255), "endereco" varchar(255), "banco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("agencia")
+  [1m[36m (8.0ms)[0m  [1mCREATE INDEX "index_agencia_on_banco_id" ON "agencia" ("banco_id")[0m
+  [1m[35m (7.9ms)[0m  CREATE TABLE "bancos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "observacoes" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.5ms)[0m  [1mCREATE TABLE "conta" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "numero_conta" varchar(255), "agencium_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("conta")
+  [1m[36m (7.7ms)[0m  [1mCREATE INDEX "index_conta_on_agencium_id" ON "conta" ("agencium_id")[0m
+  [1m[35m (18.1ms)[0m  CREATE TABLE "enderecobrasileiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome_logradouro" varchar(255), "numero" varchar(255), "complemento" varchar(255), "caixa_postal" varchar(255), "bairro" varchar(255), "cep" varchar(255), "municipio_id" integer, "endereco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (7.1ms)[0m  CREATE INDEX "index_enderecobrasileiros_on_endereco_id" ON "enderecobrasileiros" ("endereco_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecobrasileiros")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_enderecobrasileiros_on_endereco_id')
+  [1m[36m (11.1ms)[0m  [1mCREATE INDEX "index_enderecobrasileiros_on_municipio_id" ON "enderecobrasileiros" ("municipio_id")[0m
+  [1m[35m (15.4ms)[0m  CREATE TABLE "enderecoestrangeiros" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "identificacao_residencial" varchar(255), "identificacao_local" varchar(255), "identificacao_regional" varchar(255), "pai_id" integer, "endereco_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecoestrangeiros")[0m
+  [1m[35m (9.5ms)[0m  CREATE INDEX "index_enderecoestrangeiros_on_endereco_id" ON "enderecoestrangeiros" ("endereco_id")
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("enderecoestrangeiros")[0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_info('index_enderecoestrangeiros_on_endereco_id')
+  [1m[36m (3.7ms)[0m  [1mCREATE INDEX "index_enderecoestrangeiros_on_pai_id" ON "enderecoestrangeiros" ("pai_id")[0m
+  [1m[35m (9.0ms)[0m  CREATE TABLE "enderecos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "estrangeiro" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (12.1ms)[0m  [1mCREATE TABLE "municipios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "uf_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  PRAGMA index_list("municipios")
+  [1m[36m (8.2ms)[0m  [1mCREATE INDEX "index_municipios_on_uf_id" ON "municipios" ("uf_id")[0m
+  [1m[35m (9.5ms)[0m  CREATE TABLE "pais" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "nacionalidade" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (26.3ms)[0m  [1mCREATE TABLE "rubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "tabelageral_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("rubricas")
+  [1m[36m (4.2ms)[0m  [1mCREATE INDEX "index_rubricas_on_tabelageral_id" ON "rubricas" ("tabelageral_id")[0m
+  [1m[35m (19.3ms)[0m  CREATE TABLE "tabelagerals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "valor_entrada" float, "valor_saida" float, "ano" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (16.2ms)[0m  [1mCREATE TABLE "tiporubricas" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "definicao" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "ufs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sigla" varchar(255), "nome" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (12.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (7.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022224025')[0m
+  [1m[35m (9.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022182854')
+  [1m[36m (3.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019052252')[0m
+  [1m[35m (10.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121009175246')
+  [1m[36m (6.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022211201')[0m
+  [1m[35m (11.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022165543')
+  [1m[36m (9.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121009171328')[0m
+  [1m[35m (7.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022184642')
+  [1m[36m (9.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121011230342')[0m
+  [1m[35m (7.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022202448')
+  [1m[36m (3.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121022213744')[0m
+  [1m[35m (8.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121022162044')
