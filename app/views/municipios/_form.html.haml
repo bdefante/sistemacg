@@ -1,0 +1,5 @@
+= semantic_form_for [@municipio] do |form|
+ 
+  = form.input :nome, :label => 'Nome'
+  = form.input :uf, :member_label => :sigla, :label => 'Uf'
+  = form.submit 'Salvar' 

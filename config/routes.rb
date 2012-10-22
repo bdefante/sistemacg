@@ -1,4 +1,8 @@
 Sistemacg::Application.routes.draw do
+  resources :municipios
+
+  resources :ufs
+
   resources :agencia
 
   resources :pais

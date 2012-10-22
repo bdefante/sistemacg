@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022165543) do
+ActiveRecord::Schema.define(:version => 20121022184642) do
 
   create_table "agencia", :force => true do |t|
     t.string   "numero_agencia"
@@ -29,6 +29,15 @@ ActiveRecord::Schema.define(:version => 20121022165543) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "municipios", :force => true do |t|
+    t.string   "nome"
+    t.integer  "uf_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "municipios", ["uf_id"], :name => "index_municipios_on_uf_id"
 
   create_table "pais", :force => true do |t|
     t.string   "nome"
@@ -57,6 +66,13 @@ ActiveRecord::Schema.define(:version => 20121022165543) do
 
   create_table "tiporubricas", :force => true do |t|
     t.string   "definicao"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "ufs", :force => true do |t|
+    t.string   "sigla"
+    t.string   "nome"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
