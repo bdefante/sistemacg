@@ -1,0 +1,10 @@
+= semantic_form_for [@enderecobrasileiro] do |form|
+  = form.input :nome_logradouro, :label => 'Nome_logradouro'
+  = form.input :numero, :label => 'Numero'
+  = form.input :complemento, :label => 'Complemento'
+  = form.input :caixa_postal, :label => 'Caixa_postal'
+  = form.input :bairro, :label => 'Bairro'
+  = form.input :cep, :label => 'Cep'
+  = form.input :municipio, :member_label => :nome, :label => 'Municipio'
+  = form.input :endereco, :member_label => :estrangeiro, :label => 'Endereco'
+  = form.submit 'Salvar' 

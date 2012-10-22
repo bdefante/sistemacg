@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome logradouro:</b>
+  <%= @enderecobrasileiro.nome_logradouro %>
+</p>
+
+<p>
+  <b>Numero:</b>
+  <%= @enderecobrasileiro.numero %>
+</p>
+
+<p>
+  <b>Complemento:</b>
+  <%= @enderecobrasileiro.complemento %>
+</p>
+
+<p>
+  <b>Caixa postal:</b>
+  <%= @enderecobrasileiro.caixa_postal %>
+</p>
+
+<p>
+  <b>Bairro:</b>
+  <%= @enderecobrasileiro.bairro %>
+</p>
+
+<p>
+  <b>Cep:</b>
+  <%= @enderecobrasileiro.cep %>
+</p>
+
+<p>
+  <b>Municipio:</b>
+  <%= @enderecobrasileiro.municipio.nome %>
+</p>
+
+<p>
+  <b>Estrangeiro:</b>
+  <%= @enderecobrasileiro.endereco.estrangeiro %>
+</p>
+
+
+<%= link_to 'Edit', edit_enderecobrasileiro_path(@enderecobrasileiro) %> |
+<%= link_to 'Back', enderecobrasileiros_path %>
