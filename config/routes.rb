@@ -1,4 +1,6 @@
 Sistemacg::Application.routes.draw do
+  resources :enderecos
+
   resources :municipios
 
   resources :ufs
