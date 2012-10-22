@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Identificacao residencial:</b>
+  <%= @enderecoestrangeiro.identificacao_residencial %>
+</p>
+
+<p>
+  <b>Identificacao local:</b>
+  <%= @enderecoestrangeiro.identificacao_local %>
+</p>
+
+<p>
+  <b>Identificacao regional:</b>
+  <%= @enderecoestrangeiro.identificacao_regional %>
+</p>
+
+<p>
+  <b>Pais:</b>
+  <%= @enderecoestrangeiro.pai.nome %>
+</p>
+
+<p>
+  <b>Estrangeiro:</b>
+  <%= @enderecoestrangeiro.endereco.estrangeiro %>
+</p>
+
+
+<%= link_to 'Edit', edit_enderecoestrangeiro_path(@enderecoestrangeiro) %> |
+<%= link_to 'Back', enderecoestrangeiros_path %>

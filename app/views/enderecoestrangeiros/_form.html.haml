@@ -1,0 +1,8 @@
+= semantic_form_for [@enderecoestrangeiro] do |form|
+ 
+  = form.input :identificacao_residencial, :label => 'Identificacao_residencial'
+  = form.input :identificacao_local, :label => 'Identificacao_local'
+  = form.input :identificacao_regional, :label => 'Identificacao_regional'
+  = form.input :pai, :member_label => :nome, :label => 'Pai'
+  = form.input :endereco, :member_label => :estrangeiro, :label => 'Endereco'
+  = form.submit 'Salvar' 

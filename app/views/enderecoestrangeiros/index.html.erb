@@ -1,0 +1,31 @@
+<h1>Listing enderecoestrangeiros</h1>
+
+<table>
+  <tr>
+    <th>Identificacao residencial</th>
+    <th>Identificacao local</th>
+    <th>Identificacao regional</th>
+    <th>Pai</th>
+    <th>Endereco</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @enderecoestrangeiros.each do |enderecoestrangeiro| %>
+  <tr>
+    <td><%= enderecoestrangeiro.identificacao_residencial %></td>
+    <td><%= enderecoestrangeiro.identificacao_local %></td>
+    <td><%= enderecoestrangeiro.identificacao_regional %></td>
+    <td><%= enderecoestrangeiro.pai %></td>
+    <td><%= enderecoestrangeiro.endereco %></td>
+    <td><%= link_to 'Show', enderecoestrangeiro %></td>
+    <td><%= link_to 'Edit', edit_enderecoestrangeiro_path(enderecoestrangeiro) %></td>
+    <td><%= link_to 'Excluir', enderecoestrangeiro, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Enderecoestrangeiro', new_enderecoestrangeiro_path %>
