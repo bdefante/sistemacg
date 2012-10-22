@@ -1,0 +1,7 @@
+= semantic_form_for [@beneficiario] do |form|
+ 
+  = form.input :nome, :label => 'Nome'
+  = form.input :contum, :member_label => :numero_conta, :label => 'Conta'
+  = form.input :endereco, :member_label => :estrangeiro, :label => 'Estrangeiro'
+
+  = form.submit 'Salvar' 

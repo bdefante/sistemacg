@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @beneficiario.nome %>
+</p>
+
+<p>
+  <b>Conta:</b>
+  <%= @beneficiario.contum.numero_conta %>
+</p>
+
+<p>
+  <b>Estrangeiro:</b>
+  <%= @beneficiario.endereco.estrangeiro %>
+</p>
+
+
+<%= link_to 'Edit', edit_beneficiario_path(@beneficiario) %> |
+<%= link_to 'Back', beneficiarios_path %>
