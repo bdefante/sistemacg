@@ -1,4 +1,8 @@
 Sistemacg::Application.routes.draw do
+  resources :pessoajuridicas
+
+  resources :pessoafisicas
+
   resources :gastos
 
   resources :beneficiarios

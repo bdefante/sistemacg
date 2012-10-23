@@ -41,7 +41,7 @@ feature 'gerenciar Gasto' do
 
   end
 
-  scenario 'excluir Beneficiario' do #, :javascript => true do
+  scenario 'excluir Gasto' do #, :javascript => true do
 
     tabelageral = FactoryGirl.create(:tabelageral, :valor_entrada => 1500.0, :valor_saida => 1450.0, :ano => 2011)
     rubrica = FactoryGirl.create(:rubrica, :valor_entrada => 150.0, :valor_saida => 145.0, :tabelageral => tabelageral)

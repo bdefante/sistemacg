@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>CNPJ:</b>
+  <%= @pessoajuridica.cnpj %>
+</p>
+
+<p>
+  <b>Observacoes:</b>
+  <%= @pessoajuridica.observacoes %>
+</p>
+
+<p>
+  <b>Beneficiario:</b>
+  <%= @pessoajuridica.beneficiario.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_pessoajuridica_path(@pessoajuridica) %> |
+<%= link_to 'Back', pessoajuridicas_path %>

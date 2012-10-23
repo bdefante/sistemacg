@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>CPF:</b>
+  <%= @pessoafisica.cpf %>
+</p>
+
+<p>
+  <b>Documento:</b>
+  <%= @pessoafisica.documento %>
+</p>
+
+<p>
+  <b>Beneficiario:</b>
+  <%= @pessoafisica.beneficiario.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_pessoafisica_path(@pessoafisica) %> |
+<%= link_to 'Back', pessoafisicas_path %>

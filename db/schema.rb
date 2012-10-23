@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121023120735) do
+ActiveRecord::Schema.define(:version => 20121023201956) do
 
   create_table "agencia", :force => true do |t|
     t.string   "numero_agencia"
@@ -113,6 +113,26 @@ ActiveRecord::Schema.define(:version => 20121023120735) do
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
+
+  create_table "pessoafisicas", :force => true do |t|
+    t.string   "cpf"
+    t.string   "documento"
+    t.integer  "beneficiario_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "pessoafisicas", ["beneficiario_id"], :name => "index_pessoafisicas_on_beneficiario_id"
+
+  create_table "pessoajuridicas", :force => true do |t|
+    t.string   "cnpj"
+    t.string   "observacoes"
+    t.integer  "beneficiario_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "pessoajuridicas", ["beneficiario_id"], :name => "index_pessoajuridicas_on_beneficiario_id"
 
   create_table "rubricas", :force => true do |t|
     t.float    "valor_entrada"

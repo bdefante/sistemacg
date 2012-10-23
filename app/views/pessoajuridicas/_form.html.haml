@@ -1,0 +1,6 @@
+= semantic_form_for [@pessoajuridica] do |form|
+ 
+  = form.input :cnpj, :label => 'Cnpj'
+  = form.input :observacoes, :label => 'Observacoes'
+  = form.input :beneficiario, :member_label => :nome, :label => 'Beneficiario'
+  = form.submit 'Salvar' 

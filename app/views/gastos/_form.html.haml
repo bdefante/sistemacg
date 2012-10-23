@@ -1,0 +1,8 @@
+= semantic_form_for [@gasto] do |form|
+ 
+  = form.input :data, :label => 'Data'
+  = form.input :valor, :label => 'Valor'
+  = form.input :observacoes, :label => 'Observacoes'
+  = form.input :rubrica, :member_label => :valor_entrada, :label => 'Rubrica'
+  = form.input :beneficiario, :member_label => :nome, :label => 'Beneficiario'
+  = form.submit 'Salvar' 

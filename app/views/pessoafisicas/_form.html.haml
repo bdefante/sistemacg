@@ -1,0 +1,6 @@
+= semantic_form_for [@pessoafisica] do |form|
+ 
+  = form.input :cpf, :label => 'Cpf'
+  = form.input :documento, :label => 'Documento'
+  = form.input :beneficiario, :member_label => :nome, :label => 'Beneficiario'
+  = form.submit 'Salvar' 

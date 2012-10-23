@@ -1,0 +1,27 @@
+<h1>Listing pessoafisicas</h1>
+
+<table>
+  <tr>
+    <th>Cpf</th>
+    <th>Documento</th>
+    <th>Beneficiario</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pessoafisicas.each do |pessoafisica| %>
+  <tr>
+    <td><%= pessoafisica.cpf %></td>
+    <td><%= pessoafisica.documento %></td>
+    <td><%= pessoafisica.beneficiario %></td>
+    <td><%= link_to 'Show', pessoafisica %></td>
+    <td><%= link_to 'Edit', edit_pessoafisica_path(pessoafisica) %></td>
+    <td><%= link_to 'Excluir', pessoafisica, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pessoafisica', new_pessoafisica_path %>
