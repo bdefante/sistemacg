@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121022231341) do
+ActiveRecord::Schema.define(:version => 20121023120735) do
 
   create_table "agencia", :force => true do |t|
     t.string   "numero_agencia"
@@ -84,6 +84,19 @@ ActiveRecord::Schema.define(:version => 20121022231341) do
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  create_table "gastos", :force => true do |t|
+    t.string   "data"
+    t.float    "valor"
+    t.string   "observacoes"
+    t.integer  "rubrica_id"
+    t.integer  "beneficiario_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
+
+  add_index "gastos", ["beneficiario_id"], :name => "index_gastos_on_beneficiario_id"
+  add_index "gastos", ["rubrica_id"], :name => "index_gastos_on_rubrica_id"
 
   create_table "municipios", :force => true do |t|
     t.string   "nome"

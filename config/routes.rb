@@ -1,4 +1,6 @@
 Sistemacg::Application.routes.draw do
+  resources :gastos
+
   resources :beneficiarios
 
   resources :conta
