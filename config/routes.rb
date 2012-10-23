@@ -1,4 +1,6 @@
 Sistemacg::Application.routes.draw do
+  resources :telefones
+
   resources :pessoajuridicas
 
   resources :pessoafisicas

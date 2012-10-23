@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @telefone.tipo %>
+</p>
+
+<p>
+  <b>Numero:</b>
+  <%= @telefone.numero %>
+</p>
+
+<p>
+  <b>Codigo area:</b>
+  <%= @telefone.codigo_area %>
+</p>
+
+<p>
+  <b>Ramal:</b>
+  <%= @telefone.ramal %>
+</p>
+
+<p>
+  <b>Beneficiario:</b>
+  <%= @telefone.beneficiario.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_telefone_path(@telefone) %> |
+<%= link_to 'Back', telefones_path %>
